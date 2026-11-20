@@ -79,9 +79,4 @@ public class SaleController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping("")
-    public ResponseEntity<Sale> create(@RequestBody Sale sale) {
-        Sale created = saleService.save(sale);
-        return ResponseEntity.status(201).body(created);
-    }
 }
